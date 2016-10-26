@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: hstore_casting_bug_development
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: hstore_casting_bug_test
